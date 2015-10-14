@@ -45,13 +45,3 @@ class OcrLib(object):
             result[f] = ocr_text
 
         return result
-
-if __name__ == "__main__":
-
-    img_src = 'http://oss.aliyuncs.com/quancheng-syt/uploads/picture_caiwu/2015-09-28/56090caf01889.jpg'
-
-    crop_vals = {'money': {'x': 151, 'y': 186, 'w': 126, 'h': 18}, 'account': {'x': 113, 'y': 224, 'w': 210, 'h': 16}, 'recepit_num': {'x': 354, 'y': 362, 'w': 124, 'h': 16},'created': {'x':552,'y':327,'w':65,'h':16}}
-
-    ocr = OcrLib(crop_vals);
-    output = ocr.process_img(img_src)
-    print output;
